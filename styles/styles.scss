@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body,
+html {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: Montserrat;
+}
+
+body {
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+button {
+  font-family: inherit;
+}
+
+.title,
+.price,
+.price-discount {
+  font-family: Fraunces, sans-serif;
+}
+
+.title,
+.price {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.title {
+  color: var(--very-dark-blue);
+  line-height: 1;
+  max-width: 190px;
+  width: 100%;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  color: var(--dark-cyan);
+}
+
+.price-discount {
+  font-size: 0.875rem;
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.card-container {
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 1px 1px 2px 2px rgba(221, 221, 221, 0.3);
+  border-radius: 10px;
+}
+
+.left {
+  background-image: url(../images/image-product-desktop.jpg);
+  border-radius: 10px 0 0 10px;
+  flex: 1 0 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 0 10px 10px 0;
+}
+
+.tag {
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 5px;
+}
+
+.about {
+  color: var(--dark-grayish-blue);
+  font-size: 0.875rem;
+}
+
+.cart-button {
+  border: 0;
+  border-radius: 10px;
+  height: 50px;
+
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 1rem;
+  width: 100%;
+
+  cursor: pointer;
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    max-width: 343px;
+  }
+
+  .left {
+    border-radius: 10px 10px 0 0;
+    min-height: 238px;
+  }
+
+  .right {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
